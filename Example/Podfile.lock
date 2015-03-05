@@ -1,0 +1,10 @@
+PODS:
+  - dp_exec_block_on_main_thread (0.0.1)
+
+DEPENDENCIES:
+  - dp_exec_block_on_main_thread
+
+SPEC CHECKSUMS:
+  dp_exec_block_on_main_thread: be44902af805f96fb54316515eddfa850fb6a893
+
+COCOAPODS: 0.35.0

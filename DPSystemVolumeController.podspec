@@ -12,6 +12,8 @@ Pod::Spec.new do |s|
   
   s.ios.frameworks        = 'AVFoundation', 'MediaPlayer'
   
+  s.dependency 'dp_exec_block_on_main_thread'
+  
   s.license               = {
    :type => 'MIT',
    :text => <<-LICENSE

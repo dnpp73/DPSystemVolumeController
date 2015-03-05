@@ -1,0 +1,6 @@
+Example/*.xcodeproj/*
+!Example/*.xcodeproj/project.pbxproj
+!Example/*.xcworkspace/contents.xcworkspacedata
+.DS_Store
+Example/Build
+Example/Pods
