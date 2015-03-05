@@ -1,8 +1,14 @@
-dp_exec_block_on_main_thread
+DPSystemVolumeController
 =================
   
 ### Dependency  
-無し  
+- `dp_exec_block_on_main_thread`  
   
 ### Require Framework  
-無し  
+- `AVFoundation.framework`  
+- `MediaPlayer.framework`  
+  
+* * *
+  
+!!! iOS Only !!!  
+プライベート API を叩いてデバイスの音量調整するよ！！！  
