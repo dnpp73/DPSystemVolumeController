@@ -1,10 +1,10 @@
 PODS:
-  - dp_exec_block_on_main_thread (1.0)
+  - dp_exec_block_on_main_thread (1.0.1)
 
 DEPENDENCIES:
   - dp_exec_block_on_main_thread
 
 SPEC CHECKSUMS:
-  dp_exec_block_on_main_thread: 4e3270054edb0c3ebfe3bcb1c9e448163657dd1f
+  dp_exec_block_on_main_thread: 27d7bcdaf1c6b41be4321d08f44e7a57a9594f1d
 
 COCOAPODS: 0.36.0
