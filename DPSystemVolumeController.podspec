@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "DPSystemVolumeController"
-  s.version               = "0.1"
+  s.version               = "0.1.1"
   s.summary               = "iOS System Volume Hack"
   s.author                = { "Yusuke SUGAMIYA" => "yusuke.dnpp@gmail.com" }
   s.homepage              = "https://github.com/dnpp73/DPSystemVolumeController"
