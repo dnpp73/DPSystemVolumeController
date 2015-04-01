@@ -59,7 +59,10 @@
     #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
     // iOS 7.0 未満
     if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_7_0) {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         base64String = [data base64Encoding];
+        #pragma clang diagnostic pop
     }
     // iOS 7.0 以降
     else if (NSFoundationVersionNumber_iOS_7_0 <= NSFoundationVersionNumber) {
@@ -80,7 +83,10 @@
     #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
     // iOS 7.0 未満
     if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_7_0) {
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         data = [[NSData alloc] initWithBase64Encoding:base64String];
+        #pragma clang diagnostic pop
     }
     // iOS 7.0 以降
     else if (NSFoundationVersionNumber_iOS_7_0 <= NSFoundationVersionNumber) {
