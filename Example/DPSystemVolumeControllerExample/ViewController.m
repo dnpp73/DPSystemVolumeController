@@ -65,7 +65,7 @@
 
 #pragma mark - DPSystemVolumeControllerObserving
 
-- (void)systemVolumeController:(DPSystemVolumeController*)audioVolumeManager
+- (void)systemVolumeController:(DPSystemVolumeController*)systemVolumeController
                didChangeVolume:(float)volume
                isExplictChange:(BOOL)isExplictChange
                  audioCategory:(id)audioCategory

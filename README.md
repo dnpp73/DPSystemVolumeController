@@ -10,7 +10,7 @@ DPSystemVolumeController
 
 # Description
 
-change iOS volume programmable, using private class.
+change iOS Ringtone/AudioVideo volume programmable, using private class.
 
 # Warning
 
@@ -41,7 +41,7 @@ change iOS volume programmable, using private class.
 ```Objective-C
 [[DPSystemVolumeController sharedController] addSystemVolumeControllerObserver:self];
 
-- (void)systemVolumeController:(DPSystemVolumeController*)audioVolumeManager
+- (void)systemVolumeController:(DPSystemVolumeController*)systemVolumeController
                didChangeVolume:(float)volume
                isExplictChange:(BOOL)isExplictChange
                  audioCategory:(id)audioCategory
