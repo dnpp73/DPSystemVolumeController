@@ -1,13 +1,8 @@
 #import "ViewController.h"
-#if !(TARGET_IPHONE_SIMULATOR)
 #import "DPSystemVolumeController.h"
-#endif
 
 
-@interface ViewController ()
-#if !(TARGET_IPHONE_SIMULATOR)
-<DPSystemVolumeControllerObserving>
-#endif
+@interface ViewController () <DPSystemVolumeControllerObserving>
 @property (nonatomic, weak) IBOutlet UISlider* ringtoneVolumeSlider;
 @property (nonatomic, weak) IBOutlet UILabel*  ringtoneVolumeLabel;
 @property (nonatomic, weak) IBOutlet UISlider* audioVideoVolumeSlider;
@@ -23,7 +18,6 @@
 {
     [super viewDidLoad];
     
-    #if !(TARGET_IPHONE_SIMULATOR)
     [[DPSystemVolumeController sharedController] addSystemVolumeControllerObserver:self];
     
     {
@@ -36,7 +30,13 @@
         self.audioVideoVolumeSlider.value = volume;
         self.audioVideoVolumeLabel.text = [NSString stringWithFormat:@"%.2f", volume];
     }
-    #endif
+    
+    {
+        #if TARGET_IPHONE_SIMULATOR
+        self.ringtoneVolumeSlider.enabled = NO;
+        self.audioVideoVolumeSlider.enabled = NO;
+        #endif
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -55,21 +55,15 @@
 
 - (IBAction)valueChangedRingtoneVolumeSlider:(UISlider*)sender
 {
-    #if !(TARGET_IPHONE_SIMULATOR)
     [DPSystemVolumeController sharedController].volumeForRingtone = sender.value;
-    #endif
 }
 
 - (IBAction)valueChangedAudioVideoVolumeSlider:(UISlider*)sender
 {
-    #if !(TARGET_IPHONE_SIMULATOR)
     [DPSystemVolumeController sharedController].volumeForAudioVideo = sender.value;
-    #endif
 }
 
-#if !(TARGET_IPHONE_SIMULATOR)
-
-#pragma mark - BILAudioVolumeManagerObserving
+#pragma mark - DPSystemVolumeControllerObserving
 
 - (void)systemVolumeController:(DPSystemVolumeController*)audioVolumeManager
                didChangeVolume:(float)volume
@@ -90,7 +84,5 @@
     }
     
 }
-
-#endif
 
 @end

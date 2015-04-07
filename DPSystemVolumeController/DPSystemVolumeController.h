@@ -1,9 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-#if TARGET_OS_IPHONE && !(TARGET_IPHONE_SIMULATOR)
-#define ENABLE_ACCESS_PRIVATE_API 1
-#if ENABLE_ACCESS_PRIVATE_API
+#if TARGET_OS_IPHONE
 
 
 @class DPSystemVolumeController;
@@ -31,5 +29,4 @@
 @end
 
 
-#endif
 #endif
