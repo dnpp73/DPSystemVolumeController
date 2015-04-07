@@ -57,19 +57,19 @@
 {
     NSString* base64String;
     #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-    // iOS 7.0 未満
+    // less than iOS 7.0
     if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_7_0) {
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         base64String = [data base64Encoding];
         #pragma clang diagnostic pop
     }
-    // iOS 7.0 以降
+    // greater or equal iOS 7.0
     else if (NSFoundationVersionNumber_iOS_7_0 <= NSFoundationVersionNumber) {
         base64String = [data base64EncodedStringWithOptions:0];
     }
     #elif TARGET_OS_MAC
-    // OSX 10.9 以降
+    // greater or equal OSX 10.9
     if (NSFoundationVersionNumber10_9 <= NSFoundationVersionNumber) {
         base64String = [data base64EncodedStringWithOptions:0];
     }
@@ -81,19 +81,19 @@
 {
     NSData* data = nil;
     #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-    // iOS 7.0 未満
+    // less than iOS 7.0
     if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_7_0) {
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         data = [[NSData alloc] initWithBase64Encoding:base64String];
         #pragma clang diagnostic pop
     }
-    // iOS 7.0 以降
+    // greater or equal iOS 7.0
     else if (NSFoundationVersionNumber_iOS_7_0 <= NSFoundationVersionNumber) {
         data = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
     }
     #elif TARGET_OS_MAC
-    // OSX 10.9 以降
+    // greater or equal OSX 10.9
     if (NSFoundationVersionNumber10_9 <= NSFoundationVersionNumber) {
         data = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
     }

@@ -223,11 +223,13 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
 - (id)systemController
 {
     /*
-     AVSystemController というプライベートクラスを利用する。
-     以下のコードと等価
+     using AVSystemController private class.
+     equivalent below
      
+     ```Objective-C
      AVSystemController* systemController = [AVSystemController sharedAVSystemController];
      return systemController;
+     ```
      */
     
     #if !(TARGET_IPHONE_SIMULATOR)
@@ -246,15 +248,18 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
 - (BOOL)getVolume:(float*)volume category:(NSString*)category
 {
     /*
-     AVSystemController Class の
+     using AVSystemController instance methods.
      - (id)volumeCategoryForAudioCategory:(id)arg1;
      - (bool)getVolume:(float*)arg1 forCategory:(id)arg2;
-     を叩いてる。以下のコードと等価
      
+     equivalent below
+     
+     ```Objective-C
      AVSystemController* systemController = [AVSystemController sharedAVSystemController];
      NSString* volumeCategory = [systemController volumeCategoryForAudioCategory:category];
      BOOL success = [systemController getVolume:volume forCategory:volumeCategory];
      return success;
+     ```
      */
     
     #if !(TARGET_IPHONE_SIMULATOR)
@@ -282,15 +287,18 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
 - (BOOL)setVolume:(float)volume category:(NSString*)category
 {
     /*
-     AVSystemController Class の
+     using AVSystemController instance methods.
      - (id)volumeCategoryForAudioCategory:(id)arg1;
      - (bool)setVolumeTo:(float)arg1 forCategory:(id)arg2;
-     を叩いてる。以下のコードと等価
      
+     equivalent below
+     
+     ```Objective-C
      AVSystemController* systemController = [AVSystemController sharedAVSystemController];
      NSString* volumeCategory = [systemController volumeCategoryForAudioCategory:category];
      BOOL success = [systemController setVolumeTo:volume forCategory:volumeCategory];
      return success;
+     ```
      */
     
     #if !(TARGET_IPHONE_SIMULATOR)
