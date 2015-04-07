@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "DPSystemVolumeController"
-  s.version               = "0.1.3"
+  s.version               = "0.1.4"
   s.summary               = "change iOS Ringtone/AudioVideo volume programmable, using private class."
   s.author                = { "Yusuke SUGAMIYA" => "yusuke.dnpp@gmail.com" }
   s.homepage              = "https://github.com/dnpp73/DPSystemVolumeController"
