@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "DPSystemVolumeController"
-  s.version               = "0.1.4"
+  s.version               = "0.2"
   s.summary               = "change iOS Ringtone/AudioVideo volume programmable, using private class."
   s.author                = { "Yusuke SUGAMIYA" => "yusuke.dnpp@gmail.com" }
   s.homepage              = "https://github.com/dnpp73/DPSystemVolumeController"
@@ -10,9 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc          = true
   
   s.ios.frameworks        = 'AVFoundation', 'MediaPlayer'
-  
-  s.dependency 'dp_exec_block_on_main_thread'
-  
+    
   s.license               = {
    :type => 'MIT',
    :text => <<-LICENSE

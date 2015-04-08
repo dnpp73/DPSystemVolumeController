@@ -2,7 +2,7 @@ DPSystemVolumeController
 =================
 
 ### Dependency
-* `dp_exec_block_on_main_thread`
+* None
 
 ### Require Framework
 * `AVFoundation.framework`
