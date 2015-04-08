@@ -26,6 +26,8 @@
 - (void)addSystemVolumeControllerObserver:(__weak id<DPSystemVolumeControllerObserving>)observer;
 - (void)removeSystemVolumeControllerObserver:(__weak id<DPSystemVolumeControllerObserving>)observer;
 
+@property (nonatomic) dispatch_queue_t observingQueue; // default: mainQueue
+
 @end
 
 

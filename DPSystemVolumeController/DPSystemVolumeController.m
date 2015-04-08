@@ -5,7 +5,6 @@
 
 
 #import <MediaPlayer/MediaPlayer.h>
-#import "dp_exec_block_on_main_thread.h"
 #import "DPStringEncrypter.h"
 
 
@@ -82,6 +81,7 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
         #if !(TARGET_IPHONE_SIMULATOR)
         _observers = [NSHashTable weakObjectsHashTable];
         [self addVolumeChangeNotificationObserver];
+        _observingQueue = dispatch_get_main_queue();
         #endif
     }
     return self;
@@ -138,7 +138,7 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
     BOOL  isExplictChange = [notification.userInfo[[self decrypt:@"1LeAbDOKYj3lvush23o4/VI0sqpwtvg4HAyrCbLpVK0pfXQyRkQdQxSMUq6B/qvo+KKsNA/De6Sa4RAvQvbe2A=="]] isEqualToString:[self decrypt:@"6TDXuOJx05GFak1xo/IjIAWKXWDq8rLAICmUQUYpNSk="]];
     id    audioCategory   =  notification.userInfo[[self decrypt:@"1LeAbDOKYj3lvush23o4/QjRkLoqBoMSEcM+RBhm4yFZR2eRu8MoOM6Aoyb7Dz7Ol4LVTTF9+31jIxFlnQnqvg=="]];
     
-    dp_exec_block_on_main_thread(^{
+    dispatch_async(_observingQueue, ^{
         for (id<DPSystemVolumeControllerObserving> observer in _observers) {
             if ([observer respondsToSelector:@selector(systemVolumeController:didChangeVolume:isExplictChange:audioCategory:)]) {
                 [observer systemVolumeController:self didChangeVolume:volume isExplictChange:isExplictChange audioCategory:audioCategory];

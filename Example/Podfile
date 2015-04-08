@@ -1,6 +1,0 @@
-source 'git@github.com:Beatrobo/CocoaPods-Specs.git'
-source 'https://github.com/CocoaPods/Specs.git'
-
-platform :ios, "6.0"
-
-pod "dp_exec_block_on_main_thread"
