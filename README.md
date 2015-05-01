@@ -1,9 +1,11 @@
 DPSystemVolumeController
 =================
 
+[![Build Status](http://img.shields.io/travis/dnpp73/DPSystemVolumeController.svg?style=flat-square)](https://travis-ci.org/dnpp73/DPSystemVolumeController)
 [![Pod Version](http://img.shields.io/cocoapods/v/DPSystemVolumeController.svg?style=flat-square)](http://cocoadocs.org/docsets/DPSystemVolumeController/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/DPSystemVolumeController.svg?style=flat-square)](http://cocoadocs.org/docsets/DPSystemVolumeController/)
 [![Pod License](http://img.shields.io/cocoapods/l/DPSystemVolumeController.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat-square)](https://github.com/Carthage/Carthage)
 
 ### Dependency
 * None
@@ -45,7 +47,17 @@ This library can be pass the Apple's review for now(April, 2015).
 ### How to catch volume change event
 
 ```Objective-C
-[[DPSystemVolumeController sharedController] addSystemVolumeControllerObserver:self];
+#import "DPSystemVolumeController.h"
+
+@interface SomeViewController () <DPSystemVolumeControllerObserving>
+@end
+
+@implementation SomeViewController
+
+- (void)someMethod
+{
+    [[DPSystemVolumeController sharedController] addSystemVolumeControllerObserver:self];
+}
 
 - (void)systemVolumeController:(DPSystemVolumeController*)systemVolumeController
                didChangeVolume:(float)volume
@@ -65,6 +77,8 @@ This library can be pass the Apple's review for now(April, 2015).
         self.audioVideoVolumeLabel.text = [NSString stringWithFormat:@"%.2f", volume];
     }
 }
+
+@end
 ```
 
 # LICENSE
