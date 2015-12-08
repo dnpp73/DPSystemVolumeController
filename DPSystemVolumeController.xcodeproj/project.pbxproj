@@ -160,6 +160,7 @@
 		EA5C31A91C117F03006C1EFD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -169,6 +170,7 @@
 		EA5C31AA1C117F03006C1EFD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(PROJECT_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
