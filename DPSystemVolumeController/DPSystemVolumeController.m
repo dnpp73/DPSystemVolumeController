@@ -139,7 +139,7 @@ NSString* const DPSystemVolumeControllerAES256SharedKey = @"4fo81OKCX5mts2o2WQYN
     id    audioCategory   =  notification.userInfo[[self decrypt:@"1LeAbDOKYj3lvush23o4/QjRkLoqBoMSEcM+RBhm4yFZR2eRu8MoOM6Aoyb7Dz7Ol4LVTTF9+31jIxFlnQnqvg=="]];
     
     dispatch_async(_observingQueue, ^{
-        for (id<DPSystemVolumeControllerObserving> observer in _observers) {
+        for (id<DPSystemVolumeControllerObserving> observer in self->_observers) {
             if ([observer respondsToSelector:@selector(systemVolumeController:didChangeVolume:isExplictChange:audioCategory:)]) {
                 [observer systemVolumeController:self didChangeVolume:volume isExplictChange:isExplictChange audioCategory:audioCategory];
             }

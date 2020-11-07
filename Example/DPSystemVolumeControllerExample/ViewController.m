@@ -43,11 +43,11 @@
 {
     [super viewDidAppear:animated];
     #if TARGET_IPHONE_SIMULATOR
-    [[[UIAlertView alloc] initWithTitle:@"Not Work in Simulator"
-                                message:@"Go Back"
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Not Work in Simulator"
+                                                                   message:@"Go Back"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
     #endif
 }
 

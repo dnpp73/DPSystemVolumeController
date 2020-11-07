@@ -1,5 +1,6 @@
 language: objective-c
-osx_image: xcode7.1
+os: osx
+osx_image: xcode12
 xcode_project: DPSystemVolumeController.xcodeproj
 
 before_install:

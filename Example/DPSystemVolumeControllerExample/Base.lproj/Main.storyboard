@@ -1,71 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyo-Yp-b5v">
-                                <rect key="frame" x="0.0" y="225" width="320" height="117"/>
+                                <rect key="frame" x="0.0" y="389.5" width="414" height="117"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ringtone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCM-cF-SLB">
                                         <rect key="frame" x="8" y="12" width="58" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WMx-UD-WFz">
-                                        <rect key="frame" x="93" y="8" width="180" height="31"/>
+                                        <rect key="frame" x="93" y="8" width="274" height="31"/>
                                         <connections>
                                             <action selector="valueChangedRingtoneVolumeSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="spL-aO-5Hx"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuh-jI-924">
-                                        <rect key="frame" x="277" y="15" width="36" height="17"/>
+                                        <rect key="frame" x="371" y="15" width="36" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="5hl-as-dsz"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="5hl-as-dsz"/>
                                             <constraint firstAttribute="height" constant="17" id="A2g-cQ-Qgd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audio/Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe0-e2-cjV">
-                                        <rect key="frame" x="8" y="73" width="79" height="17"/>
+                                        <rect key="frame" x="8" y="73" width="78" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-nR-PDa">
-                                        <rect key="frame" x="93" y="67" width="180" height="31"/>
+                                        <rect key="frame" x="92" y="67" width="275" height="31"/>
                                         <connections>
                                             <action selector="valueChangedAudioVideoVolumeSlider:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eIN-vV-oFY"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYU-KD-nhq">
-                                        <rect key="frame" x="277" y="74" width="36" height="17"/>
+                                        <rect key="frame" x="371" y="74" width="36" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="AAM-Uv-Hrf"/>
-                                            <constraint firstAttribute="width" constant="36" id="a0q-jO-f8A"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="a0q-jO-f8A"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="IYU-KD-nhq" secondAttribute="trailing" constant="7" id="7pd-KX-yZk"/>
                                     <constraint firstAttribute="trailing" secondItem="tuh-jI-924" secondAttribute="trailing" constant="7" id="DPW-pw-TpJ"/>
@@ -85,10 +84,11 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xQ4-Jp-tf9"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jyo-Yp-b5v" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E9B-Wh-i9B"/>
-                            <constraint firstAttribute="trailing" secondItem="jyo-Yp-b5v" secondAttribute="trailing" id="Kml-6d-1hj"/>
+                            <constraint firstItem="jyo-Yp-b5v" firstAttribute="leading" secondItem="xQ4-Jp-tf9" secondAttribute="leading" id="E9B-Wh-i9B"/>
+                            <constraint firstItem="xQ4-Jp-tf9" firstAttribute="trailing" secondItem="jyo-Yp-b5v" secondAttribute="trailing" id="Kml-6d-1hj"/>
                             <constraint firstAttribute="centerY" secondItem="jyo-Yp-b5v" secondAttribute="centerY" id="RPs-Hl-x4t"/>
                         </constraints>
                     </view>
@@ -101,12 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="406.12"/>
+            <point key="canvasLocation" x="341.66491633410351" y="182.11296237244895"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
