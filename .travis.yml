@@ -4,7 +4,7 @@ osx_image: xcode12
 xcode_project: DPSystemVolumeController.xcodeproj
 
 before_install:
-  - gem install cocoapods xcpretty --no-ri --no-rdoc
+  - gem install cocoapods xcpretty
   - set -o pipefail
   - xcodebuild clean -project DPSystemVolumeController.xcodeproj -scheme DPSystemVolumeController -sdk iphonesimulator | xcpretty -c
 
